@@ -17,7 +17,7 @@
     <!-- jdk版本 -->
     <jdk.version>1.8</jdk.version>
     <!-- spring版本号 -->
-    <spring.version>4.3.9.RELEASE</spring.version>
+    <spring.version>5.2.3.RELEASE</spring.version>
     <!--spring-mybatis-->
     <mybatis-spring.version>1.3.1</mybatis-spring.version>
     <!-- mybatis版本号 -->
