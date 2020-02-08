@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="k9506-hotel:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>k9506-hotel</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="k9506-hotel-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="k9506-hotel:war exploded" />
+    </root>
+  </artifact>
+</component>

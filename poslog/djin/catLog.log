@@ -1,0 +1,832 @@
+2019.08.26 at 18:24:34.560 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.08.26 at 18:24:35.590 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM in_room_info WHERE out_room_status = ? 
+2019.08.26 at 18:24:35.636 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String)
+2019.08.26 at 18:24:35.672 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.08.26 at 18:24:35.673 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4
+2019.08.26 at 18:24:35.675 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:24:35.690 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status from in_room_info WHERE out_room_status = ? order by id desc limit ?,? 
+2019.08.26 at 18:24:35.692 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2019.08.26 at 18:24:35.696 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status
+2019.08.26 at 18:24:35.708 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 33, çŽ‰å¸, 1, 1, 101101000001010001, 13499998888, 500.00, 2019-07-20 08:23:31.0, 7, 1, 1
+2019.08.26 at 18:24:35.870 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, çŽ‰å¸, 1, 1, 101101000001010001, 13499998888, 200.00, 2019-07-20 08:21:33.0, 3, 1, 1
+2019.08.26 at 18:24:35.873 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.08.26 at 18:24:35.877 CST INFO  com.kgc.test.InRoomInfoServiceTest 44 test01 - å…±æœ‰ï¼š4æ¡æ•°æ®ã€‚ã€‚ã€‚
+2019.08.26 at 18:24:35.878 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - çŽ‰å¸    13499998888
+2019.08.26 at 18:24:35.879 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id from rooms where id = ? 
+2019.08.26 at 18:24:35.879 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 7(Integer)
+2019.08.26 at 18:24:35.885 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id
+2019.08.26 at 18:24:35.885 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 7, fm1.jpg, 8207, 2, 2
+2019.08.26 at 18:24:35.886 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:24:35.888 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - com.kgc.entity.Rooms@363042d7
+2019.08.26 at 18:24:35.889 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - null
+2019.08.26 at 18:24:35.889 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - çŽ‰å¸    13499998888
+2019.08.26 at 18:24:35.890 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id from rooms where id = ? 
+2019.08.26 at 18:24:35.891 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.08.26 at 18:24:35.894 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id
+2019.08.26 at 18:24:35.894 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, fm2.jpg, 8203, 2, 1
+2019.08.26 at 18:24:35.895 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:24:35.896 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - com.kgc.entity.Rooms@59d2400d
+2019.08.26 at 18:24:35.896 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - null
+2019.08.26 at 18:30:47.726 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.08.26 at 18:30:48.605 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM in_room_info WHERE out_room_status = ? 
+2019.08.26 at 18:30:48.654 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String)
+2019.08.26 at 18:30:48.689 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.08.26 at 18:30:48.690 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4
+2019.08.26 at 18:30:48.692 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:30:48.706 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status from in_room_info WHERE out_room_status = ? order by id desc limit ?,? 
+2019.08.26 at 18:30:48.707 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2019.08.26 at 18:30:48.710 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status
+2019.08.26 at 18:30:48.721 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 33, çŽ‰å¸, 1, 1, 101101000001010001, 13499998888, 500.00, 2019-07-20 08:23:31.0, 7, 1, 1
+2019.08.26 at 18:30:48.843 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, çŽ‰å¸, 1, 1, 101101000001010001, 13499998888, 200.00, 2019-07-20 08:21:33.0, 3, 1, 1
+2019.08.26 at 18:30:48.846 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.08.26 at 18:30:48.848 CST INFO  com.kgc.test.InRoomInfoServiceTest 44 test01 - å…±æœ‰ï¼š4æ¡æ•°æ®ã€‚ã€‚ã€‚
+2019.08.26 at 18:30:48.849 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - çŽ‰å¸    13499998888
+2019.08.26 at 18:30:48.850 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id from rooms where id = ? 
+2019.08.26 at 18:30:48.851 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 7(Integer)
+2019.08.26 at 18:30:48.856 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id
+2019.08.26 at 18:30:48.856 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 7, fm1.jpg, 8207, 2, 2
+2019.08.26 at 18:30:48.857 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:30:48.859 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - com.kgc.entity.Rooms@363042d7
+2019.08.26 at 18:30:48.859 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - null
+2019.08.26 at 18:30:48.860 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - çŽ‰å¸    13499998888
+2019.08.26 at 18:30:48.860 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id from rooms where id = ? 
+2019.08.26 at 18:30:48.861 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.08.26 at 18:30:48.863 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id
+2019.08.26 at 18:30:48.864 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, fm2.jpg, 8203, 2, 1
+2019.08.26 at 18:30:48.865 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:30:48.867 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - com.kgc.entity.Rooms@59d2400d
+2019.08.26 at 18:30:48.869 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - null
+2019.08.26 at 18:56:28.425 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.08.26 at 18:56:29.286 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM in_room_info WHERE out_room_status = ? 
+2019.08.26 at 18:56:29.328 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String)
+2019.08.26 at 18:56:29.365 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.08.26 at 18:56:29.365 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4
+2019.08.26 at 18:56:29.366 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:56:29.373 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status from in_room_info WHERE out_room_status = ? order by id desc limit ?,? 
+2019.08.26 at 18:56:29.374 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2019.08.26 at 18:56:29.376 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status
+2019.08.26 at 18:56:29.383 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 33, çŽ‰å¸, 1, 1, 101101000001010001, 13499998888, 500.00, 2019-07-20 08:23:31.0, 7, 1, 1
+2019.08.26 at 18:56:29.497 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, çŽ‰å¸, 1, 1, 101101000001010001, 13499998888, 200.00, 2019-07-20 08:21:33.0, 3, 1, 1
+2019.08.26 at 18:56:29.499 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.08.26 at 18:56:29.501 CST INFO  com.kgc.test.InRoomInfoServiceTest 44 test01 - å…±æœ‰ï¼š4æ¡æ•°æ®ã€‚ã€‚ã€‚
+2019.08.26 at 18:56:29.503 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - çŽ‰å¸    13499998888
+2019.08.26 at 18:56:29.504 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id from rooms where id = ? 
+2019.08.26 at 18:56:29.504 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 7(Integer)
+2019.08.26 at 18:56:29.510 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id
+2019.08.26 at 18:56:29.511 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 7, fm1.jpg, 8207, 2, 2
+2019.08.26 at 18:56:29.512 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:56:29.514 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - com.kgc.entity.Rooms@54dcfa5a
+2019.08.26 at 18:56:29.514 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - null
+2019.08.26 at 18:56:29.514 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - çŽ‰å¸    13499998888
+2019.08.26 at 18:56:29.515 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id from rooms where id = ? 
+2019.08.26 at 18:56:29.515 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.08.26 at 18:56:29.517 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id
+2019.08.26 at 18:56:29.518 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, fm2.jpg, 8203, 2, 1
+2019.08.26 at 18:56:29.520 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.08.26 at 18:56:29.520 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - com.kgc.entity.Rooms@340b9973
+2019.08.26 at 18:56:29.521 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - null
+2019.09.03 at 10:50:34.974 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.03 at 10:50:35.963 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: update orders SET order_status = ? where order_num = ? 
+2019.09.03 at 10:50:35.993 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 20190720082331908990(String)
+2019.09.03 at 10:50:36.003 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==    Updates: 0
+2019.09.03 at 10:50:36.016 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, order_num, order_money, remark, order_status, iri_id, create_date, flag, order_other, order_price from orders WHERE order_num like concat("%",?,"%") and order_status=? and flag=1 
+2019.09.03 at 10:50:36.017 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 20190720082331908990(String), 1(String)
+2019.09.03 at 10:50:36.041 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 0
+2019.09.03 at 10:55:54.885 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.03 at 10:55:55.792 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: update orders SET order_status = ? where order_num = ? 
+2019.09.03 at 10:55:55.815 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 20190720082331908990(String)
+2019.09.03 at 10:55:55.821 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==    Updates: 0
+2019.09.03 at 10:55:55.835 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, order_num, order_money, remark, order_status, iri_id, create_date, flag, order_other, order_price from orders WHERE order_num like concat("%",?,"%") and order_status=? and flag=1 
+2019.09.03 at 10:55:55.835 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 20190720082331908990(String), 1(String)
+2019.09.03 at 10:55:55.852 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 0
+2019.09.03 at 10:57:24.243 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.08 at 22:38:01.802 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.08 at 22:43:55.333 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.08 at 22:45:02.081 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.08 at 22:46:27.093 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.08 at 22:46:28.643 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority wherer id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.08 at 22:46:28.685 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.09.08 at 22:47:17.185 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.08 at 22:47:18.724 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.08 at 22:47:18.762 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.09.08 at 22:47:18.795 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.796 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.08 at 22:47:18.800 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.08 at 22:47:18.801 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.08 at 22:47:18.802 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.08 at 22:47:18.803 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ç³»ç»Ÿç”¨æˆ·ç®¡ç†, #, 0, 0
+2019.09.08 at 22:47:18.804 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, å®¢äººæ„è§, #, 0, 0
+2019.09.08 at 22:47:18.805 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.09.08 at 22:47:18.867 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.08 at 22:47:18.869 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer)
+2019.09.08 at 22:47:18.873 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.874 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, å…¥ä½ä¿¡æ¯ç®¡ç†, model/toShowInRoomInfoHtml, 1, 0
+2019.09.08 at 22:47:18.875 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, å…¥ä½ä¿¡æ¯æ·»åŠ , model/toSaveInRoomInfoHtml, 1, 0
+2019.09.08 at 22:47:18.877 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, æ¶ˆè´¹è®°å½•, model/toShowRoomSale, 1, 0
+2019.09.08 at 22:47:18.878 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.09.08 at 22:47:18.879 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.08 at 22:47:18.881 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.09.08 at 22:47:18.886 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.887 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, è®¢å•æŸ¥è¯¢, model/toShowOrders, 2, 0
+2019.09.08 at 22:47:18.889 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.08 at 22:47:18.891 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.08 at 22:47:18.893 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.09.08 at 22:47:18.898 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.900 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, ä¼šå‘˜ä¿¡æ¯ç®¡ç†, model/toShowVip, 3, 0
+2019.09.08 at 22:47:18.902 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, æ·»åŠ ä¼šå‘˜, model/toSaveVip, 3, 0
+2019.09.08 at 22:47:18.904 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.08 at 22:47:18.907 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.08 at 22:47:18.908 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 4(Integer)
+2019.09.08 at 22:47:18.913 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.914 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, å®¢æˆ¿ä¿¡æ¯ç®¡ç†, model/toShowRooms, 4, 0
+2019.09.08 at 22:47:18.915 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, æˆ¿åž‹ä¿¡æ¯ç®¡ç†, model/toShowRoomType, 4, 0
+2019.09.08 at 22:47:18.917 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.08 at 22:47:18.919 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.08 at 22:47:18.921 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 5(Integer)
+2019.09.08 at 22:47:18.925 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.927 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 51, è§’è‰²ä¿¡æ¯ç®¡ç†, model/toShowRole, 5, 0
+2019.09.08 at 22:47:18.928 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 52, ç”¨æˆ·ä¿¡æ¯ç®¡ç†, model/toShowUser, 5, 0
+2019.09.08 at 22:47:18.934 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 53, æ·»åŠ ç”¨æˆ·, model/toSaveUser, 5, 0
+2019.09.08 at 22:47:18.936 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.09.08 at 22:47:18.940 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.08 at 22:47:18.941 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 6(Integer)
+2019.09.08 at 22:47:18.947 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.08 at 22:47:18.949 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 61, å®¢äººæ„è§, model/toShowIdd, 6, 0
+2019.09.08 at 22:47:18.952 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.08 at 22:47:18.961 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.962 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:1
+2019.09.08 at 22:47:18.963 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:å…¥ä½ç®¡ç†
+2019.09.08 at 22:47:18.965 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=11, authorityName='å…¥ä½ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowInRoomInfoHtml', parent=1, flag='0'}
+2019.09.08 at 22:47:18.966 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=12, authorityName='å…¥ä½ä¿¡æ¯æ·»åŠ ', authorityUrl='model/toSaveInRoomInfoHtml', parent=1, flag='0'}
+2019.09.08 at 22:47:18.967 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=13, authorityName='æ¶ˆè´¹è®°å½•', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.09.08 at 22:47:18.967 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.968 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.968 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:2
+2019.09.08 at 22:47:18.969 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:è®¢å•ç®¡ç†
+2019.09.08 at 22:47:18.969 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=21, authorityName='è®¢å•æŸ¥è¯¢', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.09.08 at 22:47:18.970 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.970 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.971 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:3
+2019.09.08 at 22:47:18.972 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:ä¼šå‘˜ç®¡ç†
+2019.09.08 at 22:47:18.972 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=31, authorityName='ä¼šå‘˜ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.09.08 at 22:47:18.972 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=32, authorityName='æ·»åŠ ä¼šå‘˜', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.09.08 at 22:47:18.973 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.973 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.973 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:4
+2019.09.08 at 22:47:18.973 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:å®¢æˆ¿ç®¡ç†
+2019.09.08 at 22:47:18.973 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=41, authorityName='å®¢æˆ¿ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.09.08 at 22:47:18.974 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=42, authorityName='æˆ¿åž‹ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.09.08 at 22:47:18.974 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.974 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.974 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:5
+2019.09.08 at 22:47:18.974 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:ç³»ç»Ÿç”¨æˆ·ç®¡ç†
+2019.09.08 at 22:47:18.974 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=51, authorityName='è§’è‰²ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRole', parent=5, flag='0'}
+2019.09.08 at 22:47:18.975 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=52, authorityName='ç”¨æˆ·ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowUser', parent=5, flag='0'}
+2019.09.08 at 22:47:18.975 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=53, authorityName='æ·»åŠ ç”¨æˆ·', authorityUrl='model/toSaveUser', parent=5, flag='0'}
+2019.09.08 at 22:47:18.975 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.975 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.08 at 22:47:18.975 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:6
+2019.09.08 at 22:47:18.975 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:å®¢äººæ„è§
+2019.09.08 at 22:47:18.976 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=61, authorityName='å®¢äººæ„è§', authorityUrl='model/toShowIdd', parent=6, flag='0'}
+2019.09.08 at 22:47:18.976 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 11:57:43.159 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 11:59:30.915 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 12:28:37.575 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 12:28:38.650 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM roles 
+2019.09.09 at 12:28:38.678 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.09.09 at 12:28:38.698 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.09.09 at 12:28:38.699 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.09.09 at 12:28:38.700 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.09 at 12:28:38.708 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles order by id asc limit ?,? 
+2019.09.09 at 12:28:38.708 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.09.09 at 12:28:38.710 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.09.09 at 12:28:38.717 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, è¶…çº§ç®¡ç†å‘˜, 2019-04-29 14:19:59.0, 1, 1
+2019.09.09 at 12:28:38.718 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ä¸»ç®¡, 2019-05-05 15:04:35.0, 1, 0
+2019.09.09 at 12:28:38.719 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.09 at 12:28:38.720 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.09 at 12:28:38.720 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.09.09 at 12:28:38.723 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 12:28:38.723 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.725 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.725 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.726 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.727 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ç³»ç»Ÿç”¨æˆ·ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.728 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, å®¢äººæ„è§, #, 0, 0
+2019.09.09 at 12:28:38.729 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.09.09 at 12:28:38.729 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.09 at 12:28:38.730 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer), 0(Integer)
+2019.09.09 at 12:28:38.732 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 12:28:38.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.734 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.735 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.736 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.09 at 12:28:38.737 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 4
+2019.09.09 at 12:28:38.758 CST INFO  com.kgc.test.RoleServiceTest 38 test01 - --------------------
+2019.09.09 at 12:28:38.759 CST INFO  com.kgc.test.RoleServiceTest 39 test01 - {data=Page{count=true, pageNum=1, pageSize=2, startRow=0, endRow=2, total=3, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}, count=3}
+2019.09.09 at 12:28:38.760 CST INFO  com.kgc.test.RoleServiceTest 40 test01 - 3
+2019.09.09 at 12:28:38.760 CST INFO  com.kgc.test.RoleServiceTest 41 test01 - --------------------
+2019.09.09 at 12:28:38.761 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=1, roleName='è¶…çº§ç®¡ç†å‘˜', createDate=Mon Apr 29 14:19:59 CST 2019, status='1', flag='1', firstAuths='å…¥ä½ç®¡ç†,è®¢å•ç®¡ç†,ä¼šå‘˜ç®¡ç†,å®¢æˆ¿ç®¡ç†,ç³»ç»Ÿç”¨æˆ·ç®¡ç†,å®¢äººæ„è§'}
+2019.09.09 at 12:28:38.761 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=2, roleName='ä¸»ç®¡', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='å…¥ä½ç®¡ç†,è®¢å•ç®¡ç†,ä¼šå‘˜ç®¡ç†,å®¢æˆ¿ç®¡ç†'}
+2019.09.09 at 12:28:38.761 CST INFO  com.kgc.test.RoleServiceTest 46 test01 - --------------------
+2019.09.09 at 18:56:48.546 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 18:56:50.427 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM roles 
+2019.09.09 at 18:56:50.485 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.09.09 at 18:56:50.529 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.09.09 at 18:56:50.530 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.09.09 at 18:56:50.533 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.09 at 18:56:50.544 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles order by id asc limit ?,? 
+2019.09.09 at 18:56:50.546 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.09.09 at 18:56:50.549 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.09.09 at 18:56:50.560 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, è¶…çº§ç®¡ç†å‘˜, 2019-04-29 14:19:59.0, 1, 1
+2019.09.09 at 18:56:50.562 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ä¸»ç®¡, 2019-05-05 15:04:35.0, 1, 0
+2019.09.09 at 18:56:50.564 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.09 at 18:56:50.565 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.09 at 18:56:50.567 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.09.09 at 18:56:50.573 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 18:56:50.574 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.577 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.578 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.579 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.582 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ç³»ç»Ÿç”¨æˆ·ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.583 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, å®¢äººæ„è§, #, 0, 0
+2019.09.09 at 18:56:50.584 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.09.09 at 18:56:50.587 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.09 at 18:56:50.588 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer), 0(Integer)
+2019.09.09 at 18:56:50.593 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 18:56:50.594 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.597 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.599 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.601 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.09 at 18:56:50.603 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 4
+2019.09.09 at 18:56:50.612 CST INFO  com.kgc.test.RoleServiceTest 38 test01 - --------------------
+2019.09.09 at 18:56:50.614 CST INFO  com.kgc.test.RoleServiceTest 39 test01 - {data=Page{count=true, pageNum=1, pageSize=2, startRow=0, endRow=2, total=3, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}, count=3}
+2019.09.09 at 18:56:50.615 CST INFO  com.kgc.test.RoleServiceTest 40 test01 - 3
+2019.09.09 at 18:56:50.615 CST INFO  com.kgc.test.RoleServiceTest 41 test01 - --------------------
+2019.09.09 at 18:56:50.616 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=1, roleName='è¶…çº§ç®¡ç†å‘˜', createDate=Mon Apr 29 14:19:59 CST 2019, status='1', flag='1', firstAuths='å…¥ä½ç®¡ç†,è®¢å•ç®¡ç†,ä¼šå‘˜ç®¡ç†,å®¢æˆ¿ç®¡ç†,ç³»ç»Ÿç”¨æˆ·ç®¡ç†,å®¢äººæ„è§'}
+2019.09.09 at 18:56:50.616 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=2, roleName='ä¸»ç®¡', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='å…¥ä½ç®¡ç†,è®¢å•ç®¡ç†,ä¼šå‘˜ç®¡ç†,å®¢æˆ¿ç®¡ç†'}
+2019.09.09 at 18:56:50.617 CST INFO  com.kgc.test.RoleServiceTest 46 test01 - --------------------
+2019.09.09 at 21:52:59.135 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 21:55:00.851 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 22:02:23.754 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 22:02:25.400 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.09.09 at 22:02:25.447 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.09.09 at 22:02:25.501 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.501 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:25.516 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:25.516 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:25.516 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:25.516 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ç³»ç»Ÿç”¨æˆ·ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:25.516 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, å®¢äººæ„è§, #, 0, 0
+2019.09.09 at 22:02:25.516 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.09.09 at 22:02:25.632 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.09 at 22:02:25.632 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer)
+2019.09.09 at 22:02:25.632 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.632 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, å…¥ä½ä¿¡æ¯ç®¡ç†, model/toShowInRoomInfo, 1, 0
+2019.09.09 at 22:02:25.632 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, å…¥ä½ä¿¡æ¯æ·»åŠ , model/toSaveInRoomInfo, 1, 0
+2019.09.09 at 22:02:25.648 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, æ¶ˆè´¹è®°å½•, model/toShowRoomSale, 1, 0
+2019.09.09 at 22:02:25.648 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.09.09 at 22:02:25.648 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.09 at 22:02:25.648 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.09.09 at 22:02:25.648 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.648 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, è®¢å•æŸ¥è¯¢, model/toShowOrders, 2, 0
+2019.09.09 at 22:02:25.664 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.09 at 22:02:25.664 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.09 at 22:02:25.664 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.09.09 at 22:02:25.664 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.664 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, ä¼šå‘˜ä¿¡æ¯ç®¡ç†, model/toShowVip, 3, 0
+2019.09.09 at 22:02:25.664 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, æ·»åŠ ä¼šå‘˜, model/toSaveVip, 3, 0
+2019.09.09 at 22:02:25.664 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.09 at 22:02:25.679 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.09 at 22:02:25.679 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 4(Integer)
+2019.09.09 at 22:02:25.679 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.679 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, å®¢æˆ¿ä¿¡æ¯ç®¡ç†, model/toShowRooms, 4, 0
+2019.09.09 at 22:02:25.679 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, æˆ¿åž‹ä¿¡æ¯ç®¡ç†, model/toShowRoomType, 4, 0
+2019.09.09 at 22:02:25.679 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.09 at 22:02:25.679 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.09 at 22:02:25.679 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 5(Integer)
+2019.09.09 at 22:02:25.695 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.695 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 51, è§’è‰²ä¿¡æ¯ç®¡ç†, model/toShowRoles, 5, 0
+2019.09.09 at 22:02:25.695 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 52, ç”¨æˆ·ä¿¡æ¯ç®¡ç†, model/toShowUser, 5, 0
+2019.09.09 at 22:02:25.701 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 53, æ·»åŠ ç”¨æˆ·, model/toSaveUser, 5, 0
+2019.09.09 at 22:02:25.701 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.09.09 at 22:02:25.701 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.09.09 at 22:02:25.701 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 6(Integer)
+2019.09.09 at 22:02:25.701 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:25.701 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 61, å®¢äººæ„è§, model/toShowIdd, 6, 0
+2019.09.09 at 22:02:25.701 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:1
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:å…¥ä½ç®¡ç†
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=11, authorityName='å…¥ä½ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowInRoomInfo', parent=1, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=12, authorityName='å…¥ä½ä¿¡æ¯æ·»åŠ ', authorityUrl='model/toSaveInRoomInfo', parent=1, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=13, authorityName='æ¶ˆè´¹è®°å½•', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:2
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:è®¢å•ç®¡ç†
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=21, authorityName='è®¢å•æŸ¥è¯¢', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:3
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:ä¼šå‘˜ç®¡ç†
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=31, authorityName='ä¼šå‘˜ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=32, authorityName='æ·»åŠ ä¼šå‘˜', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:4
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:å®¢æˆ¿ç®¡ç†
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=41, authorityName='å®¢æˆ¿ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=42, authorityName='æˆ¿åž‹ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:5
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:ç³»ç»Ÿç”¨æˆ·ç®¡ç†
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=51, authorityName='è§’è‰²ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRoles', parent=5, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=52, authorityName='ç”¨æˆ·ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowUser', parent=5, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=53, authorityName='æ·»åŠ ç”¨æˆ·', authorityUrl='model/toSaveUser', parent=5, flag='0'}
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - ä¸€çº§æƒé™id:6
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - ä¸€çº§æƒé™åå­—:å®¢äººæ„è§
+2019.09.09 at 22:02:25.733 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=61, authorityName='å®¢äººæ„è§', authorityUrl='model/toShowIdd', parent=6, flag='0'}
+2019.09.09 at 22:02:25.748 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.09.09 at 22:02:41.992 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.09 at 22:02:43.648 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id FROM role_auth where role_id = ?) 
+2019.09.09 at 22:02:43.686 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, å…¥ä½ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, è®¢å•ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, ä¼šå‘˜ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, å®¢æˆ¿ç®¡ç†, #, 0, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, å…¥ä½ä¿¡æ¯ç®¡ç†, model/toShowInRoomInfo, 1, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, å…¥ä½ä¿¡æ¯æ·»åŠ , model/toSaveInRoomInfo, 1, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, æ¶ˆè´¹è®°å½•, model/toShowRoomSale, 1, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, è®¢å•æŸ¥è¯¢, model/toShowOrders, 2, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, ä¼šå‘˜ä¿¡æ¯ç®¡ç†, model/toShowVip, 3, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, æ·»åŠ ä¼šå‘˜, model/toSaveVip, 3, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, å®¢æˆ¿ä¿¡æ¯ç®¡ç†, model/toShowRooms, 4, 0
+2019.09.09 at 22:02:43.733 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, æˆ¿åž‹ä¿¡æ¯ç®¡ç†, model/toShowRoomType, 4, 0
+2019.09.09 at 22:02:43.733 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 12
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=1, authorityName='å…¥ä½ç®¡ç†', authorityUrl='#', parent=0, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=2, authorityName='è®¢å•ç®¡ç†', authorityUrl='#', parent=0, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=3, authorityName='ä¼šå‘˜ç®¡ç†', authorityUrl='#', parent=0, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=4, authorityName='å®¢æˆ¿ç®¡ç†', authorityUrl='#', parent=0, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=11, authorityName='å…¥ä½ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowInRoomInfo', parent=1, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=12, authorityName='å…¥ä½ä¿¡æ¯æ·»åŠ ', authorityUrl='model/toSaveInRoomInfo', parent=1, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=13, authorityName='æ¶ˆè´¹è®°å½•', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=21, authorityName='è®¢å•æŸ¥è¯¢', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=31, authorityName='ä¼šå‘˜ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=32, authorityName='æ·»åŠ ä¼šå‘˜', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=41, authorityName='å®¢æˆ¿ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.09.09 at 22:02:43.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=42, authorityName='æˆ¿åž‹ä¿¡æ¯ç®¡ç†', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.09.10 at 09:22:38.978 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.09.10 at 09:22:40.141 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM user 
+2019.09.10 at 09:22:40.176 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.09.10 at 09:22:40.205 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.09.10 at 09:22:40.205 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.09.10 at 09:22:40.207 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.10 at 09:22:40.213 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, username, pwd, create_date, use_status, is_admin, role_id from user order by id desc limit ?,? 
+2019.09.10 at 09:22:40.214 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.09.10 at 09:22:40.216 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, username, pwd, create_date, use_status, is_admin, role_id
+2019.09.10 at 09:22:40.223 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 15, zhangsan, 4297f44b13955235245b2497399d7a93, 2019-05-05 16:01:31.0, 1, å‰å°, 3
+2019.09.10 at 09:22:40.320 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, lisi, 4297f44b13955235245b2497399d7a93, 2019-04-29 14:45:50.0, 1, å‰å°, 2
+2019.09.10 at 09:22:40.322 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.09.10 at 09:22:40.326 CST INFO  com.kgc.test.UserServiceTest 39 test01 - å…±æœ‰ï¼š3æ¡æ•°æ®ã€‚ã€‚
+2019.09.10 at 09:22:40.326 CST INFO  com.kgc.test.UserServiceTest 42 test01 - zhangsan   4297f44b13955235245b2497399d7a93
+2019.09.10 at 09:22:40.326 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles where id = ? 
+2019.09.10 at 09:22:40.327 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.09.10 at 09:22:40.332 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.09.10 at 09:22:40.333 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, å‰å°, 2019-04-30 16:56:47.0, 1, 0
+2019.09.10 at 09:22:40.334 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.10 at 09:22:40.336 CST INFO  com.kgc.test.UserServiceTest 43 test01 - Roles{id=3, roleName='å‰å°', createDate=Tue Apr 30 16:56:47 CST 2019, status='1', flag='0', firstAuths='null'}
+2019.09.10 at 09:22:40.337 CST INFO  com.kgc.test.UserServiceTest 42 test01 - lisi   4297f44b13955235245b2497399d7a93
+2019.09.10 at 09:22:40.337 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles where id = ? 
+2019.09.10 at 09:22:40.338 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.09.10 at 09:22:40.340 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.09.10 at 09:22:40.341 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ä¸»ç®¡, 2019-05-05 15:04:35.0, 1, 0
+2019.09.10 at 09:22:40.342 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.09.10 at 09:22:40.342 CST INFO  com.kgc.test.UserServiceTest 43 test01 - Roles{id=2, roleName='ä¸»ç®¡', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='null'}
+2019.10.08 at 11:36:39.614 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:36:40.615 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.10.08 at 11:36:40.643 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.10.08 at 11:36:40.664 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.665 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:40.668 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:40.669 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:40.670 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:40.672 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ÏµÍ³ÓÃ»§¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:40.673 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, ¿ÍÈËÒâ¼û, #, 0, 0
+2019.10.08 at 11:36:40.674 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.10.08 at 11:36:40.730 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:36:40.731 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer)
+2019.10.08 at 11:36:40.734 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.735 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, Èë×¡ÐÅÏ¢¹ÜÀí, model/toShowInRoomInfo, 1, 0
+2019.10.08 at 11:36:40.736 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, Èë×¡ÐÅÏ¢Ìí¼Ó, model/toSaveInRoomInfo, 1, 0
+2019.10.08 at 11:36:40.737 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, Ïû·Ñ¼ÇÂ¼, model/toShowRoomSale, 1, 0
+2019.10.08 at 11:36:40.739 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.10.08 at 11:36:40.740 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:36:40.741 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.10.08 at 11:36:40.743 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.744 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, ¶©µ¥²éÑ¯, model/toShowOrders, 2, 0
+2019.10.08 at 11:36:40.745 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:40.746 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:36:40.746 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.10.08 at 11:36:40.748 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.749 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, »áÔ±ÐÅÏ¢¹ÜÀí, model/toShowVip, 3, 0
+2019.10.08 at 11:36:40.750 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, Ìí¼Ó»áÔ±, model/toSaveVip, 3, 0
+2019.10.08 at 11:36:40.752 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:36:40.753 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:36:40.754 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 4(Integer)
+2019.10.08 at 11:36:40.756 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.757 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, ¿Í·¿ÐÅÏ¢¹ÜÀí, model/toShowRooms, 4, 0
+2019.10.08 at 11:36:40.758 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, ·¿ÐÍÐÅÏ¢¹ÜÀí, model/toShowRoomType, 4, 0
+2019.10.08 at 11:36:40.759 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:36:40.761 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:36:40.762 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 5(Integer)
+2019.10.08 at 11:36:40.764 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.764 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 51, ½ÇÉ«ÐÅÏ¢¹ÜÀí, model/toShowRoles, 5, 0
+2019.10.08 at 11:36:40.765 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 52, ÓÃ»§ÐÅÏ¢¹ÜÀí, model/toShowUser, 5, 0
+2019.10.08 at 11:36:40.767 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 53, Ìí¼ÓÓÃ»§, model/toSaveUser, 5, 0
+2019.10.08 at 11:36:40.768 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.10.08 at 11:36:40.770 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:36:40.770 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 6(Integer)
+2019.10.08 at 11:36:40.772 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:40.773 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 61, ¿ÍÈËÒâ¼û, model/toShowIdd, 6, 0
+2019.10.08 at 11:36:40.774 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:40.779 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.779 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:1
+2019.10.08 at 11:36:40.779 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:Èë×¡¹ÜÀí
+2019.10.08 at 11:36:40.781 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=11, authorityName='Èë×¡ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:36:40.781 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=12, authorityName='Èë×¡ÐÅÏ¢Ìí¼Ó', authorityUrl='model/toSaveInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:36:40.782 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=13, authorityName='Ïû·Ñ¼ÇÂ¼', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.10.08 at 11:36:40.782 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.782 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.782 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:2
+2019.10.08 at 11:36:40.783 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:¶©µ¥¹ÜÀí
+2019.10.08 at 11:36:40.783 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=21, authorityName='¶©µ¥²éÑ¯', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.10.08 at 11:36:40.784 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.784 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.784 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:3
+2019.10.08 at 11:36:40.785 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:»áÔ±¹ÜÀí
+2019.10.08 at 11:36:40.785 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=31, authorityName='»áÔ±ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.10.08 at 11:36:40.786 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=32, authorityName='Ìí¼Ó»áÔ±', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.10.08 at 11:36:40.786 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.786 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.787 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:4
+2019.10.08 at 11:36:40.787 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:¿Í·¿¹ÜÀí
+2019.10.08 at 11:36:40.787 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=41, authorityName='¿Í·¿ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.10.08 at 11:36:40.787 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=42, authorityName='·¿ÐÍÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.10.08 at 11:36:40.787 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.788 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.789 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:5
+2019.10.08 at 11:36:40.789 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:ÏµÍ³ÓÃ»§¹ÜÀí
+2019.10.08 at 11:36:40.790 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=51, authorityName='½ÇÉ«ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRoles', parent=5, flag='0'}
+2019.10.08 at 11:36:40.790 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=52, authorityName='ÓÃ»§ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowUser', parent=5, flag='0'}
+2019.10.08 at 11:36:40.790 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=53, authorityName='Ìí¼ÓÓÃ»§', authorityUrl='model/toSaveUser', parent=5, flag='0'}
+2019.10.08 at 11:36:40.790 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.791 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:36:40.791 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:6
+2019.10.08 at 11:36:40.791 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:¿ÍÈËÒâ¼û
+2019.10.08 at 11:36:40.792 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=61, authorityName='¿ÍÈËÒâ¼û', authorityUrl='model/toShowIdd', parent=6, flag='0'}
+2019.10.08 at 11:36:40.792 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:36:41.092 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:36:41.331 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id FROM role_auth where role_id = ?) 
+2019.10.08 at 11:36:41.332 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.10.08 at 11:36:41.347 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:41.348 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:41.349 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:41.350 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:41.351 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:41.352 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, Èë×¡ÐÅÏ¢¹ÜÀí, model/toShowInRoomInfo, 1, 0
+2019.10.08 at 11:36:41.353 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, Èë×¡ÐÅÏ¢Ìí¼Ó, model/toSaveInRoomInfo, 1, 0
+2019.10.08 at 11:36:41.354 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, Ïû·Ñ¼ÇÂ¼, model/toShowRoomSale, 1, 0
+2019.10.08 at 11:36:41.354 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, ¶©µ¥²éÑ¯, model/toShowOrders, 2, 0
+2019.10.08 at 11:36:41.355 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, »áÔ±ÐÅÏ¢¹ÜÀí, model/toShowVip, 3, 0
+2019.10.08 at 11:36:41.356 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, Ìí¼Ó»áÔ±, model/toSaveVip, 3, 0
+2019.10.08 at 11:36:41.357 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, ¿Í·¿ÐÅÏ¢¹ÜÀí, model/toShowRooms, 4, 0
+2019.10.08 at 11:36:41.358 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, ·¿ÐÍÐÅÏ¢¹ÜÀí, model/toShowRoomType, 4, 0
+2019.10.08 at 11:36:41.359 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 12
+2019.10.08 at 11:36:41.361 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=1, authorityName='Èë×¡¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:36:41.362 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=2, authorityName='¶©µ¥¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:36:41.362 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=3, authorityName='»áÔ±¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:36:41.363 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=4, authorityName='¿Í·¿¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:36:41.363 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=11, authorityName='Èë×¡ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:36:41.363 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=12, authorityName='Èë×¡ÐÅÏ¢Ìí¼Ó', authorityUrl='model/toSaveInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:36:41.364 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=13, authorityName='Ïû·Ñ¼ÇÂ¼', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.10.08 at 11:36:41.364 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=21, authorityName='¶©µ¥²éÑ¯', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.10.08 at 11:36:41.364 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=31, authorityName='»áÔ±ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.10.08 at 11:36:41.365 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=32, authorityName='Ìí¼Ó»áÔ±', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.10.08 at 11:36:41.365 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=41, authorityName='¿Í·¿ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.10.08 at 11:36:41.365 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=42, authorityName='·¿ÐÍÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.10.08 at 11:36:41.583 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:36:41.906 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM in_room_info WHERE out_room_status = ? AND status = 1 
+2019.10.08 at 11:36:41.907 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String)
+2019.10.08 at 11:36:41.912 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.10.08 at 11:36:41.912 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6
+2019.10.08 at 11:36:41.913 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:41.916 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status from in_room_info WHERE out_room_status = ? and status = 1 order by id desc limit ?,? 
+2019.10.08 at 11:36:41.918 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2019.10.08 at 11:36:41.920 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status
+2019.10.08 at 11:36:41.930 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 34, õõ²õ, 0, 1, 421101016809098989, 15699998899, 600.00, 2019-07-20 08:40:52.0, 6, 1, 1
+2019.10.08 at 11:36:42.027 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 33, ÓñµÛ, 1, 1, 101101000001010001, 13499998888, 500.00, 2019-07-20 08:23:31.0, 7, 1, 1
+2019.10.08 at 11:36:42.028 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:36:42.029 CST INFO  com.kgc.test.InRoomInfoServiceTest 44 test01 - ¹²ÓÐ£º6ÌõÊý¾Ý¡£¡£¡£
+2019.10.08 at 11:36:42.030 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - õõ²õ    15699998899
+2019.10.08 at 11:36:42.030 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id,flag from rooms where id = ? 
+2019.10.08 at 11:36:42.031 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 6(Integer)
+2019.10.08 at 11:36:42.034 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2019.10.08 at 11:36:42.034 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, http://pxciogtf9.bkt.clouddn.com/80a856b3246a4ac5b217d49e47489ef7, 8206, 0, 3, 1
+2019.10.08 at 11:36:42.038 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:42.039 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - Rooms{id=6, roomPic='http://pxciogtf9.bkt.clouddn.com/80a856b3246a4ac5b217d49e47489ef7', roomNum='8206', roomStatus='0', flag='1', roomTypeId=3, roomType=RoomType{id=3, roomTypeName='ºÀ»ª¼ä', roomPrice=280.0}}
+2019.10.08 at 11:36:42.048 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - RoomType{id=3, roomTypeName='ºÀ»ª¼ä', roomPrice=280.0}
+2019.10.08 at 11:36:42.048 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - ÓñµÛ    13499998888
+2019.10.08 at 11:36:42.049 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id,flag from rooms where id = ? 
+2019.10.08 at 11:36:42.049 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 7(Integer)
+2019.10.08 at 11:36:42.051 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2019.10.08 at 11:36:42.051 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 7, http://pxciogtf9.bkt.clouddn.com/a59b469f5f2f46ea930b2619a39920ad, 8207, 1, 9, 1
+2019.10.08 at 11:36:42.052 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:42.053 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - Rooms{id=7, roomPic='http://pxciogtf9.bkt.clouddn.com/a59b469f5f2f46ea930b2619a39920ad', roomNum='8207', roomStatus='1', flag='1', roomTypeId=9, roomType=RoomType{id=9, roomTypeName='Ë«ÈË¼ä(´ø´°»§)', roomPrice=240.0}}
+2019.10.08 at 11:36:42.056 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - RoomType{id=9, roomTypeName='Ë«ÈË¼ä(´ø´°»§)', roomPrice=240.0}
+2019.10.08 at 11:36:42.260 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:36:42.465 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: update orders SET order_status = ? where order_num = ? 
+2019.10.08 at 11:36:42.467 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 20190720082331908990(String)
+2019.10.08 at 11:36:42.484 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==    Updates: 0
+2019.10.08 at 11:36:42.488 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, order_num, order_money, remark, order_status, iri_id, create_date, flag, order_other, order_price from orders WHERE order_num like concat("%",?,"%") and order_status=? and flag=1 
+2019.10.08 at 11:36:42.491 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 20190720082331908990(String), 1(String)
+2019.10.08 at 11:36:42.501 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 0
+2019.10.08 at 11:36:42.704 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:36:42.955 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM roles 
+2019.10.08 at 11:36:42.957 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.10.08 at 11:36:42.969 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.10.08 at 11:36:42.970 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.10.08 at 11:36:42.971 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:42.974 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles order by id asc limit ?,? 
+2019.10.08 at 11:36:42.976 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.10.08 at 11:36:42.978 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.10.08 at 11:36:42.979 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, ³¬¼¶¹ÜÀíÔ±, 2019-04-29 14:19:59.0, 1, 1
+2019.10.08 at 11:36:42.980 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, Ö÷¹Ü, 2019-05-05 15:04:35.0, 1, 0
+2019.10.08 at 11:36:42.982 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:36:42.983 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.10.08 at 11:36:42.984 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.10.08 at 11:36:42.991 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:42.992 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:42.993 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:42.994 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:42.995 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:42.996 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ÏµÍ³ÓÃ»§¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:42.997 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, ¿ÍÈËÒâ¼û, #, 0, 0
+2019.10.08 at 11:36:42.998 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.10.08 at 11:36:42.999 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.10.08 at 11:36:43.000 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer), 0(Integer)
+2019.10.08 at 11:36:43.004 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:36:43.005 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:43.006 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:43.007 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:43.008 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:36:43.009 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 4
+2019.10.08 at 11:36:43.014 CST INFO  com.kgc.test.RoleServiceTest 38 test01 - --------------------
+2019.10.08 at 11:36:43.014 CST INFO  com.kgc.test.RoleServiceTest 39 test01 - {data=Page{count=true, pageNum=1, pageSize=2, startRow=0, endRow=2, total=3, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}, count=3}
+2019.10.08 at 11:36:43.015 CST INFO  com.kgc.test.RoleServiceTest 40 test01 - 3
+2019.10.08 at 11:36:43.015 CST INFO  com.kgc.test.RoleServiceTest 41 test01 - --------------------
+2019.10.08 at 11:36:43.015 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=1, roleName='³¬¼¶¹ÜÀíÔ±', createDate=Mon Apr 29 14:19:59 CST 2019, status='1', flag='1', firstAuths='Èë×¡¹ÜÀí,¶©µ¥¹ÜÀí,»áÔ±¹ÜÀí,¿Í·¿¹ÜÀí,ÏµÍ³ÓÃ»§¹ÜÀí,¿ÍÈËÒâ¼û'}
+2019.10.08 at 11:36:43.016 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=2, roleName='Ö÷¹Ü', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='Èë×¡¹ÜÀí,¶©µ¥¹ÜÀí,»áÔ±¹ÜÀí,¿Í·¿¹ÜÀí'}
+2019.10.08 at 11:36:43.017 CST INFO  com.kgc.test.RoleServiceTest 46 test01 - --------------------
+2019.10.08 at 11:36:43.275 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:36:43.443 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM user 
+2019.10.08 at 11:36:43.445 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.10.08 at 11:36:43.448 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.10.08 at 11:36:43.448 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.10.08 at 11:36:43.449 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:43.450 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, username, pwd, create_date, use_status, is_admin, role_id from user order by id desc limit ?,? 
+2019.10.08 at 11:36:43.451 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.10.08 at 11:36:43.453 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, username, pwd, create_date, use_status, is_admin, role_id
+2019.10.08 at 11:36:43.454 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 15, zhangsan, 4297f44b13955235245b2497399d7a93, 2019-05-05 16:01:31.0, 0, Ç°Ì¨, 3
+2019.10.08 at 11:36:43.460 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, lisi, 4297f44b13955235245b2497399d7a93, 2019-04-29 14:45:50.0, 0, Ç°Ì¨, 2
+2019.10.08 at 11:36:43.461 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:36:43.462 CST INFO  com.kgc.test.UserServiceTest 39 test01 - ¹²ÓÐ£º3ÌõÊý¾Ý¡£¡£
+2019.10.08 at 11:36:43.462 CST INFO  com.kgc.test.UserServiceTest 42 test01 - zhangsan   4297f44b13955235245b2497399d7a93
+2019.10.08 at 11:36:43.463 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles where id = ? 
+2019.10.08 at 11:36:43.464 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.10.08 at 11:36:43.467 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.10.08 at 11:36:43.467 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, Ç°Ì¨, 2019-04-30 16:56:47.0, 1, 0
+2019.10.08 at 11:36:43.468 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:43.469 CST INFO  com.kgc.test.UserServiceTest 43 test01 - Roles{id=3, roleName='Ç°Ì¨', createDate=Tue Apr 30 16:56:47 CST 2019, status='1', flag='0', firstAuths='null'}
+2019.10.08 at 11:36:43.469 CST INFO  com.kgc.test.UserServiceTest 42 test01 - lisi   4297f44b13955235245b2497399d7a93
+2019.10.08 at 11:36:43.470 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles where id = ? 
+2019.10.08 at 11:36:43.470 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.10.08 at 11:36:43.472 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.10.08 at 11:36:43.472 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, Ö÷¹Ü, 2019-05-05 15:04:35.0, 1, 0
+2019.10.08 at 11:36:43.473 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:36:43.474 CST INFO  com.kgc.test.UserServiceTest 43 test01 - Roles{id=2, roleName='Ö÷¹Ü', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='null'}
+2019.10.08 at 11:55:23.079 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:55:24.070 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.10.08 at 11:55:24.099 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.10.08 at 11:55:24.123 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.123 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.126 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.127 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.128 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.129 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ÏµÍ³ÓÃ»§¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.130 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, ¿ÍÈËÒâ¼û, #, 0, 0
+2019.10.08 at 11:55:24.131 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.10.08 at 11:55:24.184 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:55:24.186 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer)
+2019.10.08 at 11:55:24.188 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.189 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, Èë×¡ÐÅÏ¢¹ÜÀí, model/toShowInRoomInfo, 1, 0
+2019.10.08 at 11:55:24.190 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, Èë×¡ÐÅÏ¢Ìí¼Ó, model/toSaveInRoomInfo, 1, 0
+2019.10.08 at 11:55:24.192 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, Ïû·Ñ¼ÇÂ¼, model/toShowRoomSale, 1, 0
+2019.10.08 at 11:55:24.193 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.10.08 at 11:55:24.194 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:55:24.195 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.10.08 at 11:55:24.197 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.198 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, ¶©µ¥²éÑ¯, model/toShowOrders, 2, 0
+2019.10.08 at 11:55:24.199 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:24.200 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:55:24.201 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.10.08 at 11:55:24.203 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.203 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, »áÔ±ÐÅÏ¢¹ÜÀí, model/toShowVip, 3, 0
+2019.10.08 at 11:55:24.204 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, Ìí¼Ó»áÔ±, model/toSaveVip, 3, 0
+2019.10.08 at 11:55:24.205 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:55:24.206 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:55:24.207 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 4(Integer)
+2019.10.08 at 11:55:24.209 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.210 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, ¿Í·¿ÐÅÏ¢¹ÜÀí, model/toShowRooms, 4, 0
+2019.10.08 at 11:55:24.211 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, ·¿ÐÍÐÅÏ¢¹ÜÀí, model/toShowRoomType, 4, 0
+2019.10.08 at 11:55:24.212 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:55:24.212 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:55:24.213 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 5(Integer)
+2019.10.08 at 11:55:24.215 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.215 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 51, ½ÇÉ«ÐÅÏ¢¹ÜÀí, model/toShowRoles, 5, 0
+2019.10.08 at 11:55:24.216 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 52, ÓÃ»§ÐÅÏ¢¹ÜÀí, model/toShowUser, 5, 0
+2019.10.08 at 11:55:24.218 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 53, Ìí¼ÓÓÃ»§, model/toSaveUser, 5, 0
+2019.10.08 at 11:55:24.219 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2019.10.08 at 11:55:24.221 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, authority_name, authority_url, parent, flag from authority WHERE parent=? 
+2019.10.08 at 11:55:24.221 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 6(Integer)
+2019.10.08 at 11:55:24.223 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.224 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 61, ¿ÍÈËÒâ¼û, model/toShowIdd, 6, 0
+2019.10.08 at 11:55:24.225 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:24.228 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.229 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:1
+2019.10.08 at 11:55:24.229 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:Èë×¡¹ÜÀí
+2019.10.08 at 11:55:24.230 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=11, authorityName='Èë×¡ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:55:24.230 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=12, authorityName='Èë×¡ÐÅÏ¢Ìí¼Ó', authorityUrl='model/toSaveInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:55:24.231 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=13, authorityName='Ïû·Ñ¼ÇÂ¼', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.10.08 at 11:55:24.231 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.231 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.231 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:2
+2019.10.08 at 11:55:24.231 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:¶©µ¥¹ÜÀí
+2019.10.08 at 11:55:24.231 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=21, authorityName='¶©µ¥²éÑ¯', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.10.08 at 11:55:24.232 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.232 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.232 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:3
+2019.10.08 at 11:55:24.232 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:»áÔ±¹ÜÀí
+2019.10.08 at 11:55:24.232 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=31, authorityName='»áÔ±ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.10.08 at 11:55:24.233 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=32, authorityName='Ìí¼Ó»áÔ±', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.10.08 at 11:55:24.233 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.233 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.233 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:4
+2019.10.08 at 11:55:24.234 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:¿Í·¿¹ÜÀí
+2019.10.08 at 11:55:24.234 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=41, authorityName='¿Í·¿ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.10.08 at 11:55:24.234 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=42, authorityName='·¿ÐÍÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.10.08 at 11:55:24.234 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.235 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.235 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:5
+2019.10.08 at 11:55:24.235 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:ÏµÍ³ÓÃ»§¹ÜÀí
+2019.10.08 at 11:55:24.235 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=51, authorityName='½ÇÉ«ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRoles', parent=5, flag='0'}
+2019.10.08 at 11:55:24.236 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=52, authorityName='ÓÃ»§ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowUser', parent=5, flag='0'}
+2019.10.08 at 11:55:24.236 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=53, authorityName='Ìí¼ÓÓÃ»§', authorityUrl='model/toSaveUser', parent=5, flag='0'}
+2019.10.08 at 11:55:24.236 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.236 CST INFO  com.kgc.test.AuthorityServiceTest 38 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.236 CST INFO  com.kgc.test.AuthorityServiceTest 39 test01 - Ò»¼¶È¨ÏÞid:6
+2019.10.08 at 11:55:24.236 CST INFO  com.kgc.test.AuthorityServiceTest 40 test01 - Ò»¼¶È¨ÏÞÃû×Ö:¿ÍÈËÒâ¼û
+2019.10.08 at 11:55:24.237 CST INFO  com.kgc.test.AuthorityServiceTest 43 test01 - Authority{id=61, authorityName='¿ÍÈËÒâ¼û', authorityUrl='model/toShowIdd', parent=6, flag='0'}
+2019.10.08 at 11:55:24.237 CST INFO  com.kgc.test.AuthorityServiceTest 45 test01 - ----------------------------------------------
+2019.10.08 at 11:55:24.497 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:55:24.730 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id FROM role_auth where role_id = ?) 
+2019.10.08 at 11:55:24.731 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.10.08 at 11:55:24.737 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:24.737 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.738 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.738 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.739 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:24.739 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 11, Èë×¡ÐÅÏ¢¹ÜÀí, model/toShowInRoomInfo, 1, 0
+2019.10.08 at 11:55:24.740 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 12, Èë×¡ÐÅÏ¢Ìí¼Ó, model/toSaveInRoomInfo, 1, 0
+2019.10.08 at 11:55:24.741 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, Ïû·Ñ¼ÇÂ¼, model/toShowRoomSale, 1, 0
+2019.10.08 at 11:55:24.741 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 21, ¶©µ¥²éÑ¯, model/toShowOrders, 2, 0
+2019.10.08 at 11:55:24.742 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 31, »áÔ±ÐÅÏ¢¹ÜÀí, model/toShowVip, 3, 0
+2019.10.08 at 11:55:24.743 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 32, Ìí¼Ó»áÔ±, model/toSaveVip, 3, 0
+2019.10.08 at 11:55:24.744 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, ¿Í·¿ÐÅÏ¢¹ÜÀí, model/toShowRooms, 4, 0
+2019.10.08 at 11:55:24.745 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 42, ·¿ÐÍÐÅÏ¢¹ÜÀí, model/toShowRoomType, 4, 0
+2019.10.08 at 11:55:24.746 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 12
+2019.10.08 at 11:55:24.748 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=1, authorityName='Èë×¡¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:55:24.749 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=2, authorityName='¶©µ¥¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:55:24.749 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=3, authorityName='»áÔ±¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:55:24.749 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=4, authorityName='¿Í·¿¹ÜÀí', authorityUrl='#', parent=0, flag='0'}
+2019.10.08 at 11:55:24.749 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=11, authorityName='Èë×¡ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:55:24.750 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=12, authorityName='Èë×¡ÐÅÏ¢Ìí¼Ó', authorityUrl='model/toSaveInRoomInfo', parent=1, flag='0'}
+2019.10.08 at 11:55:24.750 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=13, authorityName='Ïû·Ñ¼ÇÂ¼', authorityUrl='model/toShowRoomSale', parent=1, flag='0'}
+2019.10.08 at 11:55:24.750 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=21, authorityName='¶©µ¥²éÑ¯', authorityUrl='model/toShowOrders', parent=2, flag='0'}
+2019.10.08 at 11:55:24.750 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=31, authorityName='»áÔ±ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowVip', parent=3, flag='0'}
+2019.10.08 at 11:55:24.751 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=32, authorityName='Ìí¼Ó»áÔ±', authorityUrl='model/toSaveVip', parent=3, flag='0'}
+2019.10.08 at 11:55:24.751 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=41, authorityName='¿Í·¿ÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRooms', parent=4, flag='0'}
+2019.10.08 at 11:55:24.751 CST INFO  com.kgc.test.AuthorityServiceTest 59 test02 - Authority{id=42, authorityName='·¿ÐÍÐÅÏ¢¹ÜÀí', authorityUrl='model/toShowRoomType', parent=4, flag='0'}
+2019.10.08 at 11:55:24.978 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:55:25.288 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM in_room_info WHERE out_room_status = ? AND status = 1 
+2019.10.08 at 11:55:25.290 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String)
+2019.10.08 at 11:55:25.295 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.10.08 at 11:55:25.295 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6
+2019.10.08 at 11:55:25.296 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:25.299 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status from in_room_info WHERE out_room_status = ? and status = 1 order by id desc limit ?,? 
+2019.10.08 at 11:55:25.301 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 0(Integer), 2(Integer)
+2019.10.08 at 11:55:25.303 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status
+2019.10.08 at 11:55:25.312 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 34, õõ²õ, 0, 1, 421101016809098989, 15699998899, 600.00, 2019-07-20 08:40:52.0, 6, 1, 1
+2019.10.08 at 11:55:25.418 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 33, ÓñµÛ, 1, 1, 101101000001010001, 13499998888, 500.00, 2019-07-20 08:23:31.0, 7, 1, 1
+2019.10.08 at 11:55:25.419 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:55:25.420 CST INFO  com.kgc.test.InRoomInfoServiceTest 44 test01 - ¹²ÓÐ£º6ÌõÊý¾Ý¡£¡£¡£
+2019.10.08 at 11:55:25.421 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - õõ²õ    15699998899
+2019.10.08 at 11:55:25.422 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id,flag from rooms where id = ? 
+2019.10.08 at 11:55:25.422 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 6(Integer)
+2019.10.08 at 11:55:25.426 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2019.10.08 at 11:55:25.427 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, http://pxciogtf9.bkt.clouddn.com/80a856b3246a4ac5b217d49e47489ef7, 8206, 0, 3, 1
+2019.10.08 at 11:55:25.430 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:25.431 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - Rooms{id=6, roomPic='http://pxciogtf9.bkt.clouddn.com/80a856b3246a4ac5b217d49e47489ef7', roomNum='8206', roomStatus='0', flag='1', roomTypeId=3, roomType=RoomType{id=3, roomTypeName='ºÀ»ª¼ä', roomPrice=280.0}}
+2019.10.08 at 11:55:25.440 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - RoomType{id=3, roomTypeName='ºÀ»ª¼ä', roomPrice=280.0}
+2019.10.08 at 11:55:25.440 CST INFO  com.kgc.test.InRoomInfoServiceTest 47 test01 - ÓñµÛ    13499998888
+2019.10.08 at 11:55:25.441 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id,flag from rooms where id = ? 
+2019.10.08 at 11:55:25.442 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 7(Integer)
+2019.10.08 at 11:55:25.444 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2019.10.08 at 11:55:25.444 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 7, http://pxciogtf9.bkt.clouddn.com/a59b469f5f2f46ea930b2619a39920ad, 8207, 1, 9, 1
+2019.10.08 at 11:55:25.445 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:25.446 CST INFO  com.kgc.test.InRoomInfoServiceTest 48 test01 - Rooms{id=7, roomPic='http://pxciogtf9.bkt.clouddn.com/a59b469f5f2f46ea930b2619a39920ad', roomNum='8207', roomStatus='1', flag='1', roomTypeId=9, roomType=RoomType{id=9, roomTypeName='Ë«ÈË¼ä(´ø´°»§)', roomPrice=240.0}}
+2019.10.08 at 11:55:25.450 CST INFO  com.kgc.test.InRoomInfoServiceTest 49 test01 - RoomType{id=9, roomTypeName='Ë«ÈË¼ä(´ø´°»§)', roomPrice=240.0}
+2019.10.08 at 11:55:25.679 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:55:25.897 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: update orders SET order_status = ? where order_num = ? 
+2019.10.08 at 11:55:25.899 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(String), 20190720082331908990(String)
+2019.10.08 at 11:55:25.902 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==    Updates: 0
+2019.10.08 at 11:55:25.906 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, order_num, order_money, remark, order_status, iri_id, create_date, flag, order_other, order_price from orders WHERE order_num like concat("%",?,"%") and order_status=? and flag=1 
+2019.10.08 at 11:55:25.909 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 20190720082331908990(String), 1(String)
+2019.10.08 at 11:55:25.911 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 0
+2019.10.08 at 11:55:26.099 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:55:26.299 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM roles 
+2019.10.08 at 11:55:26.300 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.10.08 at 11:55:26.302 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.10.08 at 11:55:26.303 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.10.08 at 11:55:26.303 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:26.305 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles order by id asc limit ?,? 
+2019.10.08 at 11:55:26.306 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.10.08 at 11:55:26.308 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.10.08 at 11:55:26.309 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, ³¬¼¶¹ÜÀíÔ±, 2019-04-29 14:19:59.0, 1, 1
+2019.10.08 at 11:55:26.310 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, Ö÷¹Ü, 2019-05-05 15:04:35.0, 1, 0
+2019.10.08 at 11:55:26.311 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:55:26.312 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.10.08 at 11:55:26.313 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 1(Integer), 0(Integer)
+2019.10.08 at 11:55:26.319 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:26.319 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.321 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.324 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.325 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.326 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 5, ÏµÍ³ÓÃ»§¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.328 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 6, ¿ÍÈËÒâ¼û, #, 0, 0
+2019.10.08 at 11:55:26.329 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2019.10.08 at 11:55:26.330 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT id, authority_name, authority_url, parent, flag from authority where id in(SELECT auth_id from role_auth where role_id=?) and parent=? 
+2019.10.08 at 11:55:26.331 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer), 0(Integer)
+2019.10.08 at 11:55:26.334 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, authority_name, authority_url, parent, flag
+2019.10.08 at 11:55:26.335 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 1, Èë×¡¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.335 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, ¶©µ¥¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.336 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, »áÔ±¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.337 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 4, ¿Í·¿¹ÜÀí, #, 0, 0
+2019.10.08 at 11:55:26.338 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 4
+2019.10.08 at 11:55:26.340 CST INFO  com.kgc.test.RoleServiceTest 38 test01 - --------------------
+2019.10.08 at 11:55:26.341 CST INFO  com.kgc.test.RoleServiceTest 39 test01 - {data=Page{count=true, pageNum=1, pageSize=2, startRow=0, endRow=2, total=3, pages=2, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}, count=3}
+2019.10.08 at 11:55:26.341 CST INFO  com.kgc.test.RoleServiceTest 40 test01 - 3
+2019.10.08 at 11:55:26.342 CST INFO  com.kgc.test.RoleServiceTest 41 test01 - --------------------
+2019.10.08 at 11:55:26.342 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=1, roleName='³¬¼¶¹ÜÀíÔ±', createDate=Mon Apr 29 14:19:59 CST 2019, status='1', flag='1', firstAuths='Èë×¡¹ÜÀí,¶©µ¥¹ÜÀí,»áÔ±¹ÜÀí,¿Í·¿¹ÜÀí,ÏµÍ³ÓÃ»§¹ÜÀí,¿ÍÈËÒâ¼û'}
+2019.10.08 at 11:55:26.342 CST INFO  com.kgc.test.RoleServiceTest 44 test01 - Roles{id=2, roleName='Ö÷¹Ü', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='Èë×¡¹ÜÀí,¶©µ¥¹ÜÀí,»áÔ±¹ÜÀí,¿Í·¿¹ÜÀí'}
+2019.10.08 at 11:55:26.343 CST INFO  com.kgc.test.RoleServiceTest 46 test01 - --------------------
+2019.10.08 at 11:55:26.523 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2019.10.08 at 11:55:26.710 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM user 
+2019.10.08 at 11:55:26.711 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2019.10.08 at 11:55:26.714 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2019.10.08 at 11:55:26.715 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3
+2019.10.08 at 11:55:26.715 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:26.716 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, username, pwd, create_date, use_status, is_admin, role_id from user order by id desc limit ?,? 
+2019.10.08 at 11:55:26.717 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 2(Integer)
+2019.10.08 at 11:55:26.719 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, username, pwd, create_date, use_status, is_admin, role_id
+2019.10.08 at 11:55:26.720 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 15, zhangsan, 4297f44b13955235245b2497399d7a93, 2019-05-05 16:01:31.0, 0, Ç°Ì¨, 3
+2019.10.08 at 11:55:26.724 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, lisi, 4297f44b13955235245b2497399d7a93, 2019-04-29 14:45:50.0, 0, Ç°Ì¨, 2
+2019.10.08 at 11:55:26.725 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 2
+2019.10.08 at 11:55:26.726 CST INFO  com.kgc.test.UserServiceTest 39 test01 - ¹²ÓÐ£º3ÌõÊý¾Ý¡£¡£
+2019.10.08 at 11:55:26.726 CST INFO  com.kgc.test.UserServiceTest 42 test01 - zhangsan   4297f44b13955235245b2497399d7a93
+2019.10.08 at 11:55:26.727 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles where id = ? 
+2019.10.08 at 11:55:26.727 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 3(Integer)
+2019.10.08 at 11:55:26.730 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.10.08 at 11:55:26.731 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 3, Ç°Ì¨, 2019-04-30 16:56:47.0, 1, 0
+2019.10.08 at 11:55:26.732 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:26.733 CST INFO  com.kgc.test.UserServiceTest 43 test01 - Roles{id=3, roleName='Ç°Ì¨', createDate=Tue Apr 30 16:56:47 CST 2019, status='1', flag='0', firstAuths='null'}
+2019.10.08 at 11:55:26.734 CST INFO  com.kgc.test.UserServiceTest 42 test01 - lisi   4297f44b13955235245b2497399d7a93
+2019.10.08 at 11:55:26.735 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, role_name, create_date, status, flag from roles where id = ? 
+2019.10.08 at 11:55:26.736 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 2(Integer)
+2019.10.08 at 11:55:26.738 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, role_name, create_date, status, flag
+2019.10.08 at 11:55:26.738 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 2, Ö÷¹Ü, 2019-05-05 15:04:35.0, 1, 0
+2019.10.08 at 11:55:26.739 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2019.10.08 at 11:55:26.740 CST INFO  com.kgc.test.UserServiceTest 43 test01 - Roles{id=2, roleName='Ö÷¹Ü', createDate=Sun May 05 15:04:35 CST 2019, status='1', flag='0', firstAuths='null'}

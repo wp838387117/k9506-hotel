@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.mapper.RoomsMapper" >
+  <resultMap id="BaseResultMap" type="com.kgc.entity.Rooms" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="room_pic" property="roomPic" jdbcType="VARCHAR" />
+    <result column="room_num" property="roomNum" jdbcType="VARCHAR" />
+    <result column="room_status" property="roomStatus" jdbcType="VARCHAR" />
+    <result column="room_type_id" property="roomTypeId" jdbcType="INTEGER" />
+    <result column="flag" property="flag" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, room_pic, room_num, room_status, room_type_id,flag
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="roomsAndSelRoomTypeMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from rooms
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from rooms
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.kgc.entity.Rooms" >
+    insert into rooms (id, room_pic, room_num, 
+      room_status, room_type_id,flag)
+    values (#{id,jdbcType=INTEGER}, #{roomPic,jdbcType=VARCHAR}, #{roomNum,jdbcType=VARCHAR}, 
+      #{roomStatus,jdbcType=VARCHAR}, #{roomTypeId,jdbcType=INTEGER},#{flag,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kgc.entity.Rooms" >
+    insert into rooms
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="roomPic != null" >
+        room_pic,
+      </if>
+      <if test="roomNum != null" >
+        room_num,
+      </if>
+      <if test="roomStatus != null" >
+        room_status,
+      </if>
+      <if test="roomTypeId != null" >
+        room_type_id,
+      </if>
+      <if test="flag != null" >
+        flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="roomPic != null" >
+        #{roomPic,jdbcType=VARCHAR},
+      </if>
+      <if test="roomNum != null" >
+        #{roomNum,jdbcType=VARCHAR},
+      </if>
+      <if test="roomStatus != null" >
+        #{roomStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="roomTypeId != null" >
+        #{roomTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=VARCHAR},
+      </if>
+
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.entity.Rooms" >
+    update rooms
+    <set >
+      <if test="roomPic != null" >
+        room_pic = #{roomPic,jdbcType=VARCHAR},
+      </if>
+      <if test="roomStatus != null" >
+        room_status = #{roomStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="roomTypeId != null" >
+        room_type_id = #{roomTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="flag != null" >
+        flag = #{flag,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where
+    <if test="roomNum!=null and roomNum!=''">
+      room_num = #{roomNum,jdbcType=VARCHAR}
+    </if>
+    <if test="id!=null">
+      id = #{id}
+    </if>
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kgc.entity.Rooms" >
+    update rooms
+    set room_pic = #{roomPic,jdbcType=VARCHAR},
+      room_num = #{roomNum,jdbcType=VARCHAR},
+      room_status = #{roomStatus,jdbcType=VARCHAR},
+      room_type_id = #{roomTypeId,jdbcType=INTEGER},
+      flag = #{flag,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!--*********************自定义*************************-->
+  <!--配置自定义结果集：房屋和房屋类型-->
+  <resultMap id="roomsAndSelRoomTypeMap" type="com.kgc.entity.Rooms" extends="BaseResultMap">
+    <association property="roomType" column="room_type_id" select="com.kgc.mapper.RoomTypeMapper.selectByPrimaryKey"/>
+  </resultMap>
+
+  <!--查询条件-->
+  <sql id="Base_Column_Query">
+      <if test="t.roomStatus!=null and t.roomStatus!=''">
+        and room_status = #{t.roomStatus}
+      </if>
+      <if test="t.roomNum!=null and t.roomNum!=''">
+        and room_num=#{t.roomNum}
+      </if>
+  </sql>
+
+  <!--根据条件查询多个房间数据-->
+  <select id="selectManyTByPramas" resultMap="roomsAndSelRoomTypeMap">
+     select <include refid="Base_Column_List" ></include> from rooms where 1=1 <include refid="Base_Column_Query"></include> and flag=1 order by id desc
+  </select>
+
+  <!--查询所有可用的房屋的信息-->
+  <select id="selectAllT" resultMap="roomsAndSelRoomTypeMap">
+      select <include refid="Base_Column_List"></include> from rooms where flag=1 order by id desc
+  </select>
+
+  <!--根据条件查询单个房间数据-->
+  <select id="selectTByPramas" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/> from rooms where 1=1 <include refid="Base_Column_Query"/>
+  </select>
+</mapper>

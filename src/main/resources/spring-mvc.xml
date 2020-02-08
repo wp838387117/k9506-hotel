@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--配置访问路径的前后缀
+          视图解析器(匿名bean)
+    -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--访问路径前缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!--配置路径后缀-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--文件上传解析器-->
+      <!-- 配置可以解析多功能文件的解析器,该bean的name属性值必须为multipartResolver,因为spring是根据byName引用的这个bean对象 -->
+    <bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--配置最大的文件上传大小-->
+        <property name="maxUploadSize" value="10485760"/>
+    </bean>
+
+    <!--引用自定义拦截器   interceptors:拦截器-->
+    <mvc:interceptors>
+        <!--配置拦截器-->
+        <mvc:interceptor>
+            <!--被拦截的路径-->
+            <mvc:mapping path="/model/toIndex"/>
+            <!--匿名bean:始终存在与IOC容器，可以直接被使用-->
+            <bean class="com.kgc.interceptor.MyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--打开注解驱动-->
+    <mvc:annotation-driven />
+
+    <!--设置访问静态资源-->
+    <mvc:default-servlet-handler/>
+</beans>

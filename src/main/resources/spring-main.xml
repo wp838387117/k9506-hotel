@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--配置扫描器-->
+    <context:component-scan base-package="com.kgc.*"/>
+
+    <!--读取db.properties-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!--配置连接数据库的数据源C3P0-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--配置连接数据库的四大件-->
+        <!--数据库驱动类型-->
+        <property name="driverClass" value="${db.driverClass}"/>
+        <!--数据库连接路径-->
+        <property name="jdbcUrl" value="${db.jdbcUrl}"/>
+        <!--用户名-->
+        <property name="user" value="${db.user}"/>
+        <!--密码-->
+        <property name="password" value="${db.password}"/>
+        <!--C3P0连接池的其他配置-->
+        <property name="maxPoolSize" value="5"/>
+        <property name="minPoolSize" value="1"/>
+    </bean>
+
+    <!--配置mybatis与spring整合的相关配置
+         得到SqlSessionFactory
+    -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+         <!--依赖引入数据源对象-->
+         <property name="dataSource" ref="dataSource"/>
+         <!--读取mybatis-config.xml配置文件，一般进行mybatis特殊配置时需要-->
+         <property name="configLocation" value="classpath:mybatis-config.xml"/>
+         <!--配置扫描别名-->
+         <property name="typeAliasesPackage" value="com.kgc.entity"/>
+         <!-- xml路径 -->
+         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--配置mybatis与spring整合的相关配置
+          得到Mapper动态代理对象（用匿名bean）
+            通过此工具类将Mapper动态代理对象实例化并放入到IOC容器中
+    -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+         <!--扫描到Mapper包下的所有Mappper文件-->
+         <property name="basePackage" value="com.kgc.mapper"/>
+         <!--依赖注入sqlSessionFactory-->
+         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!--配置spring的默认事物功能组建-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+         <!--依赖引入数据源-->
+         <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--继续配置spring的事物功能组建（自定义）-->
+    <!--引入事物功能组建-->
+    <!--<tx:advice id="myTx" transaction-manager="transactionManager">
+         &lt;!&ndash;自定义在那些方法下加入事物管理&ndash;&gt;
+         <tx:attributes>
+             &lt;!&ndash;以find开头的方法名设置为只读（不加上事物）&ndash;&gt;
+             <tx:method name="find*" read-only="true"/>
+             &lt;!&ndash;以remove开头的方法名设置为不只读（加上事物）&ndash;&gt;
+             <tx:method name="remove*" read-only="false"/>
+             &lt;!&ndash;以save开头的方法名设置为不只读（加上事物）&ndash;&gt;
+             <tx:method name="save*" read-only="false"/>
+             &lt;!&ndash;以update开头的方法名设置为不只读（加上事物）&ndash;&gt;
+             <tx:method name="update*" read-only="false"/>
+         </tx:attributes>
+    </tx:advice>
+
+    &lt;!&ndash;通过切面编程的方式把事物功能组件加入到业务层中&ndash;&gt;
+    <aop:config proxy-target-class="true">
+         &lt;!&ndash;配置切点&ndash;&gt;
+         <aop:pointcut id="txPointcut" expression="execution(public * cn.com.djin.ssm.service.impl.*.*(..))"/>
+         &lt;!&ndash;配置切面
+              advice-ref="myTx" 引入事物功能组件
+                pointcut-ref="txPointcut"配置切点
+         &ndash;&gt;
+         <aop:advisor advice-ref="myTx" pointcut-ref="txPointcut"/>
+
+    </aop:config>-->
+
+    <!--事务注解驱动-->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+
+</beans>

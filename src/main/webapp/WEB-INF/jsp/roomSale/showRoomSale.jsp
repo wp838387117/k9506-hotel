@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+<head>
+    <base href="<%=basePath%>"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <!--引入layui的样式文件-->
+    <link rel="stylesheet" href="lib/layui/css/layui.css">
+    <!--引入layui的js文件-->
+    <script src="lib/layui/layui.js"></script>
+</head>
+<body>
+    <blockquote class="layui-elem-quote">销售记录详情</blockquote>
+    <!--查询的表单-->
+    <form class="layui-form" action="" lay-filter="example">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">房间编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="roomNum" autocomplete="off" class="layui-input" placeholder="请输入房间编号">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">入住时间</label>
+                <div class="layui-input-inline" style="width: 320px;">
+                    <input type="text" class="layui-input" id="test3" placeholder="选则时间范围" name="queryTimes">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1"><i class="layui-icon">&#xe615;</i>查询</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--存放表格中数据的容器-->
+    <table id="demo" lay-filter="test"></table>
+</body>
+<!--引入自定义的js文件-->
+<script src="js/showRoomSale.js"></script>
+<!--数据表格的工具条-->
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="query">查看</a>
+</script>
+</html>
