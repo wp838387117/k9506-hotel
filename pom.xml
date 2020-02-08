@@ -23,7 +23,7 @@
     <!-- mybatis版本号 -->
     <mybatis.version>3.4.1</mybatis.version>
     <!--数据库连接池c3p0版本-->
-    <c3p0.version>0.9.5-pre8</c3p0.version>
+    <c3p0.version>0.9.5.4</c3p0.version>
     <mchange.version>0.2.12</mchange.version>
     <!--数据库驱动包版本号-->
     <mysql.version>5.1.29</mysql.version>
