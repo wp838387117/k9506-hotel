@@ -26,7 +26,7 @@
     <c3p0.version>0.9.5-pre8</c3p0.version>
     <mchange.version>0.2.12</mchange.version>
     <!--数据库驱动包版本号-->
-    <mysql.version>5.1.29</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <!--junit测试包版本号-->
     <junit.version>4.12</junit.version>
     <!--日志包版本号-->
